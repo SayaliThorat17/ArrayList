@@ -1,12 +1,16 @@
 package myArrayList;
-
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
 public class MyArrayList {
-	
 	private int MyArrayList[];
-
+	private int TempMyArrayList[];
+	private static int MAX = 50;
 	public MyArrayList() {
 		// TODO Auto-generated constructor stub
-		MyArrayList=new int[50];
+		MyArrayList=new int[MAX];
 		for (int i = 0; i < MyArrayList.length; i++) { 
 			MyArrayList[i]=-1;
 		}
@@ -18,6 +22,14 @@ public class MyArrayList {
 		int count=this.size();
 		//System.out.println("array size"+count);
 		int i;
+		if (size()==MAX) {
+			TempMyArrayList=Arrays.copyOf(MyArrayList, MAX+25);
+			MAX=MAX+25;
+			for (int j = size(); j < TempMyArrayList.length; j++) { 
+				TempMyArrayList[j]=-1;
+			}
+			MyArrayList=TempMyArrayList;
+		}
 		for( i=0;i<count;i++){
 			if( MyArrayList[i]>newValue)
 				break;
@@ -27,6 +39,7 @@ public class MyArrayList {
 		}
 		MyArrayList[i]=newValue;
 	}
+
 
 	public void printInsertionOrder() {
 		System.out.println("Inside print");
@@ -38,13 +51,19 @@ public class MyArrayList {
 		for (int i = 0; i < MyArrayList.length; i++) {
 			if(MyArrayList[i]==value)
 			{
+				int k=i;
 				for (int j = i+1; j < MyArrayList.length; j++) {
-					int k=i;
-					MyArrayList[i]=MyArrayList[j];
+
+					MyArrayList[k]=MyArrayList[j];
 					k++;
 				}
+				i=i-1;
 			}
 		}
+	}
+	public void compact() {
+		TempMyArrayList=Arrays.copyOf(MyArrayList, size());
+		MyArrayList=TempMyArrayList;
 	}
 	public int size() {
 		int cnt=0;
@@ -72,6 +91,4 @@ public class MyArrayList {
 		}
 		return index;
 	}
-
-
 }
