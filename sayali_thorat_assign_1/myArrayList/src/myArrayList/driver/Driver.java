@@ -25,7 +25,6 @@ public static void main(String[] args) throws FileNotFoundException, IOException
 	
 	testObj.testMe(myArrayListObj, resultObj);
 	
-	//System.out.println(result.toString());
-	//result.ResulttoFile();
+	
 }
 }
