@@ -7,11 +7,11 @@ import java.util.Arrays;
 public class MyArrayList {
 	private int MyArrayList[];
 	private int TempMyArrayList[];
-	private static int MAX = 50;
+	
 	public MyArrayList() {
 		// TODO Auto-generated constructor stub
-		MyArrayList=new int[MAX];
-		for (int i = 0; i < MyArrayList.length; i++) { 
+
+		for (int i = 0; i < MyArrayList.length; i++) {
 			MyArrayList[i]=-1;
 		}
 
@@ -24,8 +24,8 @@ public class MyArrayList {
 		int i;
 		if (size()==MAX) {
 			TempMyArrayList=Arrays.copyOf(MyArrayList, MAX+25);
-			MAX=MAX+25;
-			for (int j = size(); j < TempMyArrayList.length; j++) { 
+
+			for (int j = size(); j < TempMyArrayList.length; j++) {
 				TempMyArrayList[j]=-1;
 			}
 			MyArrayList=TempMyArrayList;
@@ -35,7 +35,7 @@ public class MyArrayList {
 				break;
 		}
 		for(int k=MyArrayList.length-2; k>=i; k--){
-			MyArrayList[k+1]=MyArrayList[k];            
+			MyArrayList[k+1]=MyArrayList[k];
 		}
 		MyArrayList[i]=newValue;
 	}
@@ -43,7 +43,7 @@ public class MyArrayList {
 
 	public void printInsertionOrder() {
 		System.out.println("Inside print");
-		for (int i = 0; i<size(); ++i) { 
+		for (int i = 0; i<size(); ++i) {
 			System.out.println(MyArrayList[i]);
 		}
 	}

@@ -1,5 +1,5 @@
-# CSX42: Assignment 1
-## Name: Sayali Thorat
+# CSX42: Assignment 1 - Design Patterns
+
 
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
@@ -24,9 +24,7 @@ Description: Compiles your code and generates .class files inside the BUILD fold
 -----------------------------------------------------------------------
 ## Instruction to run:
 
-I am unable to run my program using ant .
-The same program is running in eclipse. I am not able to understand what is the issue exactly.
-The same arguments run in eclipse but not in ant.
+
 
 The output file is also getting generated in eclipse and its showing Following output on running the program :
 
@@ -48,7 +46,6 @@ Multiple Delete Test  :- Passed
 
 /////////////////////////////////////////////////
 
-Please consider my case as I am new to ant and not so efficient in handling it. I can demo my code in eclipse. I really request to consider my case as this is my first time and from next assignment I will take measure beforehand.
 
 
 -----------------------------------------------------------------------
@@ -70,4 +67,3 @@ submitted to the Academic Honesty Committee of the Watson School to
 determine the action that needs to be taken. "
 
 Date: -- 06/17/2019
-
