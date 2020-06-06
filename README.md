@@ -1,4 +1,4 @@
-# CSX42: Assignment 1 - Design Patterns
+# CSX42: Design Patterns - Assignment 1
 
 
 Implemented ArrayList functionality in Java.
